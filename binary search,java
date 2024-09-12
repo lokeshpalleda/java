@@ -27,12 +27,14 @@ public class Binary
 		int n=ar.length;
 		int e=n-1;
 		int mid;
+		boolean found=false;
 		while(s<e)
 		{
 			mid=(s+e)/2;
 			if(key==ar[mid])
 			{
-				System.out.println("key found at "+mid);
+				System.out.println("key found at "+(mid+1));
+				found = true;
 				break;
 			}
 			else if(key<ar[mid])
@@ -44,8 +46,10 @@ public class Binary
 				s=mid+1;
 			}
 		}
-		
-			
+		if(!found)
+		{
+		    System.out.println("key not found");
+		}
 	}
 	public static void main(String args[])
 	{
@@ -66,7 +70,4 @@ public class Binary
 		}
 		search(ar);
 	}
-}					
-					
-		
-		
+}	
