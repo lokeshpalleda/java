@@ -29,4 +29,18 @@ public class Bst{
             inorder(root.right);
         }
     }
+    public void preorder(Node root){
+        if(root!=Null){           
+            System.out.println(root.data);
+            preorder(root.left);
+            preorder(root.right);
+        }
+    }
+    public void postorder(Node root){
+        if(root!=Null){
+            postorder(root.left);
+            postorder(root.right);
+            System.out.println(root.data);
+        }
+    }
 }
